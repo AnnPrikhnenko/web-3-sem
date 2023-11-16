@@ -3,141 +3,175 @@
 <head>
     <title>FeelCode</title>
     <link href="style.css" rel="stylesheet">
+    <link href="adaptive.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main-script.js"></script>
+    <script src="scripts/all.js"></script>
     <meta charset="UTF-8">
     <meta name="keywords" content="программирование, математика, обучение, онлайн">
     <meta name="description" content="Сайт онлайн школы по программированию и математике">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
     <div class="header">
-        <div class="header-nav">
-            <div class="header-nav__logo">
-                <img src="images/res.png" alt="cat" width=100%>
-            </div>
-           <div class="header-nav__item">
-               <a href="#">О занятиях</a>
-           </div>
-            <div class="header-nav__item">
-                <a href="#">Услуги</a>
-            </div>
-            <div class="header-nav__item">
-                <a href="#">Отзывы</a>
-            </div>
-            <div class="header-nav__item">
-                <a href="#">Контакты</a>
-            </div>
+        <div class="header-nav__logo">
+            <img id="header-logo" src="images/cat.png" alt="phone">
+            <div class="header-logo-desc">FeelCode</div>
+        </div>
+        <div class="header-burger">
+            <span></span>
         </div>
         <div class="header-nav">
-            <div class="header-nav__item into">
-                <a href="#">ВОЙТИ</a>
+            <div class="header-nav__item">
+                <div class="header-nav-item__elem">
+                    <img class="icons" src="images/in.png" alt="main-sheet">
+                </div>
+                <div class="header-nav-item__elem header-desc">
+                    <a href="index.html">Главная</a>
+                </div>
             </div>
-            <div class="header-nav__item into">
-                <a href="#">РЕГИСТРАЦИЯ</a>
+            <div class="header-nav__item">
+                <div class="header-nav-item__elem">
+                    <img class="icons" src="images/table.png" alt="table">
+                </div>
+                <div class="header-nav-item__elem header-desc">
+                    <a href="lessons.html">О занятиях</a>
+                </div>
+            </div>
+            <div class="header-nav__item">
+                <div class="header-nav-item__elem">
+                    <img class="icons" src="images/brain.png" alt="brain">
+                </div>
+                <div class="header-nav-item__elem header-desc">
+                    <a href="programs.html">Направления</a>
+                </div>
+            </div>
+            <div class="header-nav__item">
+                <div class="header-nav-item__elem">
+                    <img class="icons" src="images/rate.png" alt="rate">
+                </div>
+                <div class="header-nav-item__elem header-desc">
+                    <a href="reviews.html">Отзывы</a>
+                </div>
+            </div>
+            <div class="header-nav__item">
+                <div class="header-nav-item__elem">
+                    <img class="icons" src="images/mes.png" alt="phone">
+                </div>
+                <div class="header-nav-item__elem header-desc">
+                    <a href="contacts.html">Контакты</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="main">
-        <div class="main-first">
-            <div class="main-grid">
-                <div class="main-grid__item info">
-                    <h1>
-                        <br><br>Как проходят наши занятия?
-                    </h1>
-                    <p>
-                        Занимаемся на удобной площадке для онлайн занятий - Skype!
-                    </p>
-                    <p>
-                        Все преподаватели оснащены графическими планшетами, поэтому качество записей не хуже, чем на доске в школе<br>
-                        Но! в отличие от школы, все записи сохраняются и присылаются после урока, так что можно не переживать, что ребенок чего-то не запишет
-                    </p>
-                    <p>
-                        Вся теория с урока оформлена в удобные конспекты, которые ученики будут получать сразу после объяснения учителя
-                    </p>
-                    <h4>
-                        Цели занятий по углубленной математике
-                    </h4>
-                    <ul class="info-list">
-                        <li> Поступить в школы городского набора: 30, 239, 366 </li>
-                        <li> Узнать <b>гораздо больше</b>, чем в школьной программе </li>
-                        <li> Научиться абстрактно мыслить для решения интерсных задач </li>
-                        <li> Увидеть <i>"магию"</i> математики и научиться ее использовать </li>
-                    </ul>
-
-                    <h4>
-                        Цели занятий по программированию
-                    </h4>
-                    <ul class="info-list">
-                        <li> Пройти основы популярного языка программирования <b>Python</b> </li>
-                        <li> Написать свои <b>игры</b>, не воруя код из интернета </li>
-                        <li> Попробовать себя в олимпиадном программировании </li>
-                    </ul>
+        <div class="info">
+            <div class="info__item">
+                <div class="info-item__elem">
+                    <img src="images/теориядробей.jpg" alt="теория">
                 </div>
-                <div class="main-grid__item banner">
-                    <h2>
-                        Пробное занятие бесплатно
-                    </h2>
-                    <p>
-                        Оставьте заявку прямо на сайте, с Вами свяжется менеджер и ответит на все интересующие вопросы
-                    </p>
-                    <div class="banner__butt">
-                        <a href="#">ОСТАВИТЬ ЗАЯВКУ</a>
-                    </div>
+                <div class="info-item__elem">
+                    <h1>Формат занятий</h1>
+                    <p>Все занятия проходят онлайн, а значит
+                        не надо тратить время на дорогу!</p>
+                    <p><i>А как же учитель будет писать на доске?</i><br>
+                    Все преподаватели оснащены графическими планшетами,
+                    поэтому качество записей ничуть не хуже, чем на доске,
+                    зато можно не переживать, что ребенок чего-то не запишет в тетрадь,
+                    так как вся теория, написанная преподавателем останется в конспекте.</p>
                 </div>
             </div>
-        </div>
-        <div class="gallery">
-            <div class="gallery__item"><img src="images/game100.png" alt="game1"></div>
-            <div class="gallery__item"><img src="images/game2.png" alt="game2"></div>
-            <div class="gallery__item"><img src="images/game3.jpeg" alt="game3"></div>
-            <div class="gallery__item"><img src="images/game4.jpeg" alt="game3"></div>
-        </div>
-        <div class="main-second">
-            <div class="grid">
-                <div class="grid__item title">день недели</div>
-                <div class="grid__item title">16:00 - 17:30</div>
-                <div class="grid__item title">17:30 - 19:00</div>
-                <div class="grid__item title">19:00 - 20:30</div>
-                <div class="grid__item title">понедельник</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item title">вторник</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item title">среда</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item title">четверг</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item title">пятница</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item title">суббота</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item">программирование</div>
-                <div class="grid__item title">воскресенье</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
-                <div class="grid__item">математика</div>
+            <div class="info__item">
+                <div class="info-item__elem">
+                    <h1>Удобная площадка</h1>
+                    <p>
+                        Мы занимаемся на всем известной площадке - skype.
+                        В общем чате ребята смогут и найти все конспекты и дз,
+                        задать вопросы и поделиться крутой программой или задачей.
+                    </p>
+                </div>
+                <div class="info-item__elem">
+                    <img src="images/скайп.jpg" alt="скайп">
+                </div>
             </div>
-
+            <div class="info__item">
+                <div class="info-item__elem">
+                    <img src="images/разбордз.jpg" alt="дз">
+                </div>
+                <div class="info-item__elem">
+                    <h1>Домашние задания</h1>
+                    <p>
+                        По всем занятиям есть домашние работы,
+                        которые лично проверяет преподаватель и затем разбирает
+                        на уроке или обсуждает в личных сообщениях с учеником.
+                    </p>
+                    <p><i>Совсем не получается дз?</i><br>
+                        Не переживайте, преподавателю можно задавать вопросы
+                        в любое время в личных сообщениях,
+                        а он как можно скорее постарается ответить.
+                    </p>
+                </div>
+            </div>
+            <div class="info__item">
+                <div class="info-item__elem">
+                    <h1>Конспекты</h1>
+                    <p><i>Что-то забыл?</i><br>
+                        После каждого занятия ребята будут получать
+                        подробные конспекты со всей теорией урока,
+                        поэтому всегда можно будет освежить в памяти
+                        пройденный материал.
+                    </p>
+                </div>
+                <div class="info-item__elem">
+                    <img src="images/конс2.jpg" alt="конспекты">
+                </div>
+            </div>
+            <div class="info__item">
+                <div class="info-item__elem">
+                    <img src="images/учитель.jpg" alt="учитель">
+                </div>
+                <div class="info-item__elem">
+                    <h1>Индивидуальный подход</h1>
+                    <p>
+                        Преподаватели не обязаны строго идти по программе.
+                        Если группа посильнее, то всегда предусмотрены
+                        дополнительные задачки,
+                        а если послабее - то можно и подольше
+                        посидеть на одной теме, но главное - чтобы ребята во всем
+                        разобрались.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer">
-        <div class="footer-nav">
-            <div class="footer-nav__item">
-                <a href="#">+7(911)111-1111</a>
+        <div class="footer__item">
+            <div class="footer-item__elem">
+                <h1>Записывайтесь на занятия:</h1>
             </div>
-            <div class="footer-nav__item">
-                <a href="#">WhatsApp</a>
+        </div>
+        <div class="footer__item footer-contacts">
+            <div class="footer-item__elem footer-contact">
+                <img class="icons" src="images/wha.png" alt="WhatsApp">
             </div>
-            <div class="footer-nav__item">
-                <a href="#">Telegram</a>
+            <div class="footer-item__elem footer-contact">
+                <img class="icons" src="images/mail.png" alt="mail">
+            </div>
+            <div class="footer-item__elem footer-contact">
+                <img class="icons" src="images/tg.png" alt="telegram">
+            </div>
+        </div>
+        <div class="footer__item">
+            <div class="footer-item__elem">
+                <p>Вы можете задавать все вопросы в удобном для Вас мессенджере,
+                    <br>а также посетить <strong>бесплатную консультацию</strong>,
+                    на которой Вам ответят на все вопросы и помогут подобрать
+                    преподавателя и удобное время занятий</p>
+            </div>
+        </div>
+        <div class="footer__item">
+            <div id="form" class="footer-item__elem">
+                <p><strong>Получить консультацию + бесплатное пробное занятие</strong></p>
             </div>
         </div>
     </div>
