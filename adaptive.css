@@ -4,13 +4,13 @@
     }
 }
 
-@media only screen and (max-width: 1162px) {
+@media only screen and (max-width: 1098px) {
     .header-nav-item__elem img{
         display: none;
     }
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 890px) {
     .info :nth-child(odd) {
         display: flex;
         flex-direction: column-reverse;
