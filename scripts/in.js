@@ -10,8 +10,6 @@ $(function(){
 let cnt = 0;
 
 let tasks = [
-    //{name: "Залить лабу на гит"},
-    //{name: "Проверить github pages"}
 ];
 
 let completed = []
@@ -98,7 +96,6 @@ function loadCompl() {
 }
 
 function addTask() {
-    // tasks.length
     tasks.push({name: document.querySelector(".task-choice__input").value, id: cnt});
     cnt += 1
     document.querySelector(".task-choice__input").value = ""
@@ -179,4 +176,45 @@ function changeState(elementId) {
             document.getElementById(completed[compl].id).style.display = "none";
         }
     }
+}
+
+// lab 6
+// preloader
+
+let clicks = 0;
+
+function sleep(ms) {
+    return new Promise(
+        resolve => setTimeout(resolve, ms)
+    );
+}
+function renderJson(data) {
+    for(let d in data) {
+        console.log(data[d].title);
+        tasks.push({name: data[d].title, id: cnt});
+        cnt += 1
+        load()
+        toLocalStorage()
+    }
+}
+
+async function loadFromJson() {
+    clicks += 1;
+    console.log(clicks);
+    document.getElementById("preloader__image").style.display = "block";
+    await sleep(2000);
+    let uId = clicks%20;
+    fetch(`https://jsonplaceholder.typicode.com/todos?userId=${uId}`)
+        .then((response) => response.json())
+        .then((json) => {
+            console.log(json);
+            document.getElementById("preloader__image").style.display = "none";
+            renderJson(json);
+        })
+        .catch(function(error) {
+            document.getElementById("preloader__image").style.display = "none";
+            document.getElementById("error__image").style.display = "block";
+            console.log("Error");
+            console.log(error);
+        });
 }

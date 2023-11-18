@@ -20,7 +20,8 @@
 }
 
 .task-checkbox {
-    width: 40px;
+    width: 20px;
+    height: 20px;
 }
 
 .task__choice {
@@ -82,3 +83,34 @@ input, button, select {
     text-decoration: line-through;
 }
 
+.preloader, .error {
+    display: flex;
+    align-self: center;
+    z-index: 1001;
+}
+
+.error {
+    display: flex;
+    align-self: center;
+    z-index: 1000;
+}
+
+#preloader__image {
+    width: 64px;
+    height: 64px;
+    background: url('images/pr.gif');
+    display: none;
+}
+
+#error__image {
+    width: 380px;
+    height: 360px;
+    background: url('images/er.gif');
+    display: none;
+}
+
+.load__tasks {
+    display: flex;
+    align-self: center;
+    padding-bottom: 10px;
+}
