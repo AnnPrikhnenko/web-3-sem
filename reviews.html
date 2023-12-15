@@ -2,37 +2,44 @@
 <html lang="ru">
 <head>
     <title>FC-Отзывы</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="reviews.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/reviews-script.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
 <div id="header"></div>
 <div class="main">
-    <div class="gallery">
-        <div class="gallery-item">
-            <div class="gallery-item__elem">
-                <img src="images/g1.jpeg" alt="отзыв">
-                <p>Богдан, 5 класс, курс "Углубленная математика"</p>
+    <div class="swiper gallery">
+        <div class="swiper-wrapper gallery-item">
+            <div class="swiper-slide .gallery-item__elem ">
+                <div class="swiper-slide-image">
+                    <img src="images/g1.jpeg" alt="отзыв">
+                </div>
             </div>
-            <div class="gallery-item__elem">
-                <img src="images/g2.jpeg" alt="отзыв">
-                <p>Максим, 7 класс, курс "Школьная математика"</p>
+            <div class="swiper-slide .gallery-item__elem ">
+                <div class="swiper-slide-image">
+                    <img src="images/g2.jpeg" alt="отзыв">
+                </div>
+            </div>
+            <div class="swiper-slide .gallery-item__elem ">
+                <div class="swiper-slide-image">
+                    <img src="images/g1.jpeg" alt="отзыв">
+                </div>
+            </div>
+            <div class="swiper-slide .gallery-item__elem ">
+                <div class="swiper-slide-image">
+                    <img src="images/g4.jpeg" alt="отзыв">
+                </div>
             </div>
         </div>
-        <div class="gallery-item">
-            <div class="gallery-item__elem">
-                <img src="images/g3.jpeg" alt="отзыв">
-                <p>Вероника, 6 класс, курс "Python c нуля"</p>
-            </div>
-            <div class="gallery-item__elem">
-                <img src="images/g4.jpeg" alt="отзыв">
-                <p>Костя, 5 класс, курс "Python c нуля"</p>
-            </div>
-        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </div>
 <div id="footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="scripts/reviews-script.js"></script>
 </body>
 </html>

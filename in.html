@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>FC-Войти</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="adaptive.css" rel="stylesheet">
+    <link href="in.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/in.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="header"></div>
+<div class="main">
+    <div class="task_main">
+        <div class="task">
+            <h2>Список задач</h2>
+            <div class="task__choice">
+                <input type="text" placeholder="Введите новую задачу" class="task-choice__input">
+                <button id="sub">Добавить</button>
+            </div>
+            <div class="task-options">
+                <select onchange="changeState()">
+                    <option value="active">Активные</option>
+                    <option value="complete">Выполненные</option>
+                </select>
+                <button onclick="deleteAll()">Удалить все задачи</button>
+            </div>
+            <div class = "task-items">
+            </div>
+            <div class="load__tasks">
+                <button id="load__tasks__button" onclick="loadFromJson()">Загрузить данные</button>
+            </div>
+            <div class="preloader">
+                <div id="preloader__image">
+                </div>
+            </div>
+            <div class="error">
+                <div id="error__image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
